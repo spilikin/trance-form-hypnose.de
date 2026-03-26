@@ -1,6 +1,7 @@
 ---
 title: "Willkommen"
 weight: 1
+header_menu: true
 ---
 
 > „Lebensenergie wieder spüren –<br>wie wenn die Wolken die Sonne freigeben."

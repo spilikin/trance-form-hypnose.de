@@ -9,8 +9,8 @@
   --highlight-inverse: #1A3347;
   --highlight-inverse-contrast: #f0ede5;
   /* Soft translucent guard for hero overlay */
-  --cover-title-and-description-guard-bg-color: rgba(26, 51, 71, 0.55);
-  --cover-title-text-shadow: rgba(0,0,0,0.6) 0px 2px 10px;
+  --cover-title-and-description-guard-bg-color: rgba(255, 255, 255, 0.9);
+  --cover-title-text-shadow: none;
   /* === sticky top/left navigation menus === */
   /* Sandy gold for nav links */
   --sticky-menu-text-color: #C4A35A;
