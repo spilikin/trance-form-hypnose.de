@@ -1,0 +1,46 @@
+:root {
+
+    /* === Cover / Landing area === */
+    /* Deep ocean teal – from the Baltic Sea photographs */
+    --cover-text-color: #f0ede5;
+    /* Warm gold – from the sunset/sunrise images */
+    --highlight: #C4A35A;
+    --highlight-contrast: #1A3347;
+    --highlight-inverse: #1A3347;
+    --highlight-inverse-contrast: #f0ede5;
+
+    /* Soft translucent guard for hero overlay */
+    --cover-title-and-description-guard-bg-color: rgba(26, 51, 71, 0.55);
+    --cover-title-text-shadow: rgba(0,0,0,0.6) 0px 2px 10px;
+
+
+    /* === sticky top/left navigation menus === */
+    /* Sandy gold for nav links */
+    --sticky-menu-text-color: #C4A35A;
+
+
+    /* === Alternating content (post) sections  === */
+    /* Light section – warm sand/off-white */
+    --section-light-text-color: #2C3A47;
+    --section-light-bg-color: #F4F0E6;
+
+    /* Dark section – deep ocean navy */
+    --section-dark-text-color: #EAE6DC;
+    --section-dark-bg-color: #1F3D55;
+
+    /* Quotes – muted teal */
+    --section-uni-quote: #5C8A9F;
+    --section-uni-code-bg-color: #E4DFD4;
+
+    /* === Single pages === */
+    --single-page-text-color: var(--section-light-text-color);
+    --single-page-bg-color: var(--section-light-bg-color);
+
+    /* === Footer === */
+    /* Dark navy footer */
+    --footer-color-background: #122533;
+    --footer-color: #A8BEC8;
+
+    /* === Lists === */
+    --ul-li-icon: fa-circle;
+}

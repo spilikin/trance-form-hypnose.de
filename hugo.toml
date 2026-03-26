@@ -1,0 +1,56 @@
+baseURL = "https://trance-form-hypnose.de"
+
+disableKinds = ["section", "taxonomy", "term", "RSS", "robotsTXT"]
+
+defaultContentLanguage = "de"
+
+theme = "hugo-scroll"
+
+title = "Trance...form – Auflösende Hypnose | Dr. med. Kerstin Uhl-Hochgräber"
+
+enableEmoji = true
+
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true
+
+[params]
+    favicon = "images/favicon.png"
+    images = ["images/hero-statue.jpg"]
+    title_guard = true
+
+    title = "Trance...form – Auflösende Hypnose"
+    description = "Auflösende Hypnose bei Ängsten, Depressionen, Selbstzweifeln und inneren Blockaden. Dr. med. Kerstin Uhl-Hochgräber, Mühlenbeck."
+
+    language_menu = false
+    show_current_lang = false
+
+    copyright = "© 2026 Dr. med. Kerstin Uhl-Hochgräber · trance.form@email.de"
+    hidedesignbyline = false
+
+    invertSectionColors = false
+
+    image_options = "webp q90 lanczos photo"
+
+    combine_page_and_site_title = false
+
+    [params.footer]
+        showContactIcons = true
+        showFooterLinks = false
+
+    [params.meta]
+        keywords = "Hypnose, Auflösende Hypnose, Hypnotherapie, Ängste, Depressionen, Burnout, Schlafstörungen, Selbstwert, Mühlenbeck, Dr. Kerstin Uhl-Hochgräber, Trance"
+
+    [[params.contacts]]
+        label = "E-Mail"
+        value = "trance.form@email.de"
+        url = "mailto:trance.form@email.de"
+        icon = "fa fa-envelope"
+
+[languages]
+    [languages.de]
+        weight = 10
+        languageName = "Deutsch"
+        contentDir = "content/de"
+        title = "Trance...form – Auflösende Hypnose | Dr. med. Kerstin Uhl-Hochgräber"
