@@ -252,7 +252,7 @@ li {
 /* Mobile Phones (max 480px) */
 @media (max-width: 480px) {
     body {
-        font-size: 1.2rem;
+        font-size: 1.2rem !important;
         margin-top: 48px;
     }
 
