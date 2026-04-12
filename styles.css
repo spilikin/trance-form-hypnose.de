@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Akaya Telivigala';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('webfonts/akaya-telivigala-v28-latin-regular.woff2') format('woff2'),
+         url('webfonts/akaya-telivigala-v28-latin-regular.ttf') format('truetype');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +19,15 @@ body {
     line-height: 1.6;
     color: rgb(19, 19, 174);
     background-color: #fff;
+}
+
+/* Hamburger toggle (hidden on desktop) */
+.hamburger {
+    display: none;
+}
+
+.hamburger-label {
+    display: none;
 }
 
 /* Navigation Bar */
@@ -161,30 +179,53 @@ li {
 
 /* Tablet und kleinere Screens (max 768px) */
 @media (max-width: 768px) {
-    nav {
+    .hamburger-label {
+        display: block;
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
-        height: auto;
+        z-index: 200;
+        background-color: rgb(19, 19, 174);
+        color: white;
+        font-family: 'Akaya Telivigala', cursive;
+        padding: 12px 15px;
+        font-size: 1.5em;
+        cursor: pointer;
+        line-height: 1;
+    }
+
+    nav {
+        position: fixed;
+        top: 48px;
+        left: 0;
+        right: 0;
         width: 100%;
-        flex-direction: row;
+        height: auto;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        z-index: 150;
+    }
+
+    .hamburger:checked ~ nav {
+        max-height: 100vh;
+        overflow-y: auto;
     }
 
     nav ul {
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: column;
         max-width: 100%;
     }
 
     nav a {
-        padding: 10px 12px;
-        font-size: 0.75em;
+        padding: 12px 15px;
+        font-size: 0.9em;
     }
 
     body {
         margin-left: 0;
-        margin-top: 70px;
+        margin-top: 48px;
     }
 
     h1 {
@@ -210,14 +251,8 @@ li {
 
 /* Mobile Phones (max 480px) */
 @media (max-width: 480px) {
-    nav a {
-        padding: 8px 8px;
-        font-size: 0.65em;
-    }
-
     body {
         font-size: 14px;
-        margin-top: 60px;
     }
 
     .container {
@@ -272,15 +307,3 @@ li {
     display: table;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    nav a {
-        padding: 12px 10px;
-        font-size: 14px;
-    }
-    
-    h1 { font-size: 2em; }
-    h2 { font-size: 1.8em; }
-    h3 { font-size: 1.5em; }
-    h4 { font-size: 1.2em; }
-}
