@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über mich - Trance.form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ueber-mich.html" class="active">Über mich</a></li>
+            <li><a href="angst-panikattacken.html">Ängste & Panik</a></li>
+            <li><a href="selbstwert.html">Selbstwert</a></li>
+            <li><a href="schlafstoeungen.html">Schlaf</a></li>
+            <li><a href="burnout.html">Burnout</a></li>
+            <li><a href="glaubenssaetze.html">Glaubenssätze</a></li>
+            <li><a href="methode.html">Methode</a></li>
+            <li><a href="ablauf.html">Ablauf</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Dr. med. Kerstin Uhl-Hochgräber</h1>
+                <div class="clearfix">
+            <img src="kzert.png" alt="Zertifikate und Ausbildungen" class="badge-img">
+        </div>
+
+        <div class="intro-text">
+            <p>In der Inneren Medizin untersuchen wir das Herz, die Lunge, das Blut. Aber das Gefühl von Erschöpfung, Herzrasen, oder die schlaflose Nacht lässt sich oft nicht im Laborwert messen. Trotz moderner Diagnostik stoße ich als Internistin oft an Grenzen, wenn die Seele durch den Körper spricht. Auf der Suche nach einer Methode, die die Symptome an der Wurzel löst, bin ich auf die Auflösende Hypnose nach Floris Weber gestoßen.</p>
+            <p>Diese Form der Hypnosetherapie arbeitet nicht mit esoterischen Versprechen, sondern mit der gezielten Verarbeitung von gestauten Emotionen im Unterbewusstsein.</p>
+            <p>Wenn Sie spüren, dass Ihr Körper Ihnen Signale sendet, die wir rein medizinisch nicht vollständig lösen können, lade ich Sie ein: Lassen Sie uns gemeinsam schauen, welche emotionalen Blockaden dahinterstehen.</p>
+            <p>Das Ziel ist echte, spürbare Erleichterung. Damit Sie nicht nur körperlich gesund werden, sondern sich auch innerlich wieder frei und sicher fühlen.<br>
+            Als Fachärztin und Hypnosetherapeutin begleite ich Sie auf dem Weg zu innerer Freiheit und emotionaler Gesundheit.</p>
+        </div>
+
+    <script>
+        function toggleSection(id) {
+            var x = document.getElementById(id);
+            var btn = event.target;
+            if (x.style.display === "block") {
+                x.style.display = "none";
+                if(btn.className === "mehr-erfahren-btn" || btn.innerHTML.includes("[Weniger anzeigen]")) {
+                    btn.innerHTML = btn.innerHTML.replace("[Weniger anzeigen]", "[Weiter]").replace("Weniger anzeigen", "Mehr Erfahren");
+                }
+            } else {
+                x.style.display = "block";
+                if(btn.className === "mehr-erfahren-btn" || btn.innerHTML.includes("[Weiter]")) {
+                    btn.innerHTML = btn.innerHTML.replace("[Weiter]", "[Weniger anzeigen]").replace("Mehr Erfahren", "Weniger anzeigen");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

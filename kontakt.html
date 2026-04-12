@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt & Angebot - Trance.form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ueber-mich.html">Über mich</a></li>
+            <li><a href="angst-panikattacken.html">Ängste & Panik</a></li>
+            <li><a href="selbstwert.html">Selbstwert</a></li>
+            <li><a href="schlafstoeungen.html">Schlaf</a></li>
+            <li><a href="burnout.html">Burnout</a></li>
+            <li><a href="glaubenssaetze.html">Glaubenssätze</a></li>
+            <li><a href="methode.html">Methode</a></li>
+            <li><a href="ablauf.html">Ablauf</a></li>
+            <li><a href="kontakt.html" class="active">Kontakt</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Kontakt & Mein Angebot für Sie</h1>
+
+        <h2>Wie Sie mich erreichen</h2>
+        <p>Sie können mir einfach eine E-Mail schreiben oder über docto-lib einen Termin für ein kostenloses Vorgespräch vereinbaren.</p>
+
+        <p><strong>E-Mail:</strong> trance.form@email.de</p>
+
+        <h2>Das erste Gespräch</h2>
+        <p>In diesem Gespräch können wir uns kennenlernen und Ihr Anliegen besprechen, als auch den Ort für die Hypnose festlegen. Es dauert ca. 15 Minuten und ist völlig unverbindlich.</p>
+
+        <p>Wenn Sie sich für eine Hypnosetherapie entscheiden schicke ich Ihnen im Anschluss einen Anamnesebogen und einen Behandlungsvertrag den Sie bitte mindestens 2 Tage vor der ersten Sitzung ausgefüllt und unterschrieben per E-Mail (trance.form@email.de) zurückschicken.</p>
+        
+        <h2>Behandlungsort</h2>
+        <h3>Vor Ort oder Online</h3>
+        <p>Wir können die Sitzungen vor Ort in Berlin Wilhelmsruh oder Mühlenbeck durchführen oder Online via Zoom, was es örtlich flexibler macht und sie in der Sicherheit ihres Zuhauses in Trance gehen können.</p>
+        
+        <h2>Die Sitzungen</h2>
+        <h3>Dauer und Rhythmus</h3>
+        <p>Die Sitzungen dauern 50 Minuten und finden am besten im Wochenrhythmus statt. Abhängig von der Diagnose benötigen Sie zwischen 3 und 6 Sitzungen.</p>
+        
+        <p>Bei Burnout oder Ängsten bietet sich das Paket Intensiv Hypnosetherapie an um zeitnah intensiv zu arbeiten.</p>
+        
+        <h2>Kosten</h2>
+        <ul style="list-style: none; margin-left: 0;">
+            <li><strong>Erstgespräch (15 Minuten):</strong> kostenlos</li>
+            <li><strong>Hypnosetherapiesitzung (50 Minuten):</strong> 150 Euro</li>
+            <li><strong>Paket: Intensiv Hypnosetherapie (3x 90 Minuten):</strong> 780 Euro</li>
+        </ul>
+
+        <h2>Nächste Schritte</h2>
+        <p style="margin-top: 30px; text-align: center; font-size: 1.1em;">
+            <strong>Schreiben Sie mir jetzt eine E-Mail oder vereinbaren Sie direkt einen Termin!</strong><br><br>
+            📧 trance.form@email.de
+        </p>
+
+        <p style="text-align: center; margin-top: 20px; font-style: italic; color: rgb(100, 100, 150);">
+            Ihre erste Sitzung könnte der Anfang eines neuen, freieren Lebens sein.
+        </p>
+    </div>
+
+    <script>
+        function toggleSection(id) {
+            var x = document.getElementById(id);
+            var btn = event.target;
+            if (x.style.display === "block") {
+                x.style.display = "none";
+                if(btn.className === "mehr-erfahren-btn" || btn.innerHTML.includes("[Weniger anzeigen]")) {
+                    btn.innerHTML = btn.innerHTML.replace("[Weniger anzeigen]", "[Weiter]").replace("Weniger anzeigen", "Mehr Erfahren");
+                }
+            } else {
+                x.style.display = "block";
+                if(btn.className === "mehr-erfahren-btn" || btn.innerHTML.includes("[Weiter]")) {
+                    btn.innerHTML = btn.innerHTML.replace("[Weiter]", "[Weniger anzeigen]").replace("Mehr Erfahren", "Weniger anzeigen");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

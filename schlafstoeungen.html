@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schlafstörungen - Trance.form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ueber-mich.html">Über mich</a></li>
+            <li><a href="angst-panikattacken.html">Ängste & Panik</a></li>
+            <li><a href="selbstwert.html">Selbstwert</a></li>
+            <li><a href="schlafstoeungen.html" class="active">Schlaf</a></li>
+            <li><a href="burnout.html">Burnout</a></li>
+            <li><a href="glaubenssaetze.html">Glaubenssätze</a></li>
+            <li><a href="methode.html">Methode</a></li>
+            <li><a href="ablauf.html">Ablauf</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Schlafstörungen</h1>
+        <p class="highlight-text">Endlich wieder abschalten</p>
+
+        <p>Gedankenkarussell und nächtliches Grübeln sind oft Zeichen für unverarbeitete Tagesereignisse oder tieferliegende Konflikte. Indem wir diese emotionalen Lasten in Trance bearbeiten, bereiten wir den Weg für eine natürliche, erholsame Nachtruhe – ganz ohne Schlafmittel.</p>
+
+        <p>Schlafstörungen können viele Ursachen haben. Oft liegen emotionale Belastungen und innere Konflikte der Schlaflosigkeit zugrunde. Statt die Symptome mit Medikamenten zu bekämpfen, arbeiten wir an der Ursache.</p>
+
+        <p>Mit Auflösender Hypnose können wir die inneren Belastungen, die Sie nachts wach halten, effizient abarbeiten. Dadurch kann sich Ihr Nervensystem wieder regenerieren, und Sie finden zu einem natürlichen Schlaf zurück.</p>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <p><a href="kontakt.html" style="color: rgb(19, 19, 174); font-weight: bold; text-decoration: none; font-size: 1.2em;">Vereinbaren Sie ein kostenloses Vorgespräch →</a></p>
+        </div>
+    </div>
+
+    <script>
+        function toggleSection(id) {
+            var x = document.getElementById(id);
+            var btn = event.target;
+            if (x.style.display === "block") {
+                x.style.display = "none";
+                if(btn.className === "mehr-erfahren-btn" || btn.innerHTML.includes("[Weniger anzeigen]")) {
+                    btn.innerHTML = btn.innerHTML.replace("[Weniger anzeigen]", "[Weiter]").replace("Weniger anzeigen", "Mehr Erfahren");
+                }
+            } else {
+                x.style.display = "block";
+                if(btn.className === "mehr-erfahren-btn" || btn.innerHTML.includes("[Weiter]")) {
+                    btn.innerHTML = btn.innerHTML.replace("[Weiter]", "[Weniger anzeigen]").replace("Mehr Erfahren", "Weniger anzeigen");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

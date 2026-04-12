@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burnout-Prävention - Trance.form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ueber-mich.html">Über mich</a></li>
+            <li><a href="angst-panikattacken.html">Ängste & Panik</a></li>
+            <li><a href="selbstwert.html">Selbstwert</a></li>
+            <li><a href="schlafstoeungen.html">Schlaf</a></li>
+            <li><a href="burnout.html" class="active">Burnout</a></li>
+            <li><a href="glaubenssaetze.html">Glaubenssätze</a></li>
+            <li><a href="methode.html">Methode</a></li>
+            <li><a href="ablauf.html">Ablauf</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Burnout-Prävention & Erschöpfung</h1>
+        <p class="highlight-text">Akkus nachhaltig laden</p>
+
+        <p>Burnout ist mehr als nur „zu viel Arbeit". Es ist oft das Resultat einer emotionalen Verausgabung über lange Zeit. Ich helfe Ihnen, die inneren Antreiber zu identifizieren und die emotionale Erschöpfung an der Wurzel zu lösen, bevor der Körper die „Notbremse" zieht.</p>
+
+        <h2>Chronische Erschöpfung verstehen</h2>
+        <p>Burnout entsteht, wenn wir unsere eigenen Grenzen nicht wahrnehmen oder überschreiten, wenn wir zu viel von uns selbst verlangen oder wenn innere emotionale Konflikte zu ständiger Anspannung führen.</p>
+
+        <p>Mit Auflösender Hypnose arbeiten wir daran, diese inneren Antreiber zu finden und zu neutralisieren. Dadurch kann sich Ihr Körper wieder erholen, und Sie finden zu einem nachhaltigen Gleichgewicht zwischen Leistung und Regeneration zurück.</p>
+
+        <p>Wenn Sie bereits erste Zeichen von Burnout spüren – ständige Müdigkeit, fehlende Motivation, körperliche Beschwerden – ist jetzt ein guter Zeitpunkt, Abhilfe zu schaffen.</p>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <p><a href="kontakt.html" style="color: rgb(19, 19, 174); font-weight: bold; text-decoration: none; font-size: 1.2em;">Vereinbaren Sie ein kostenloses Vorgespräch →</a></p>
+        </div>
+    </div>
+
+    <script>
+        function toggleSection(id) {
+            var x = document.getElementById(id);
+            var btn = event.target;
+            if (x.style.display === "block") {
+                x.style.display = "none";
+                if(btn.className === "mehr-erfahren-btn" || btn.innerHTML.includes("[Weniger anzeigen]")) {
+                    btn.innerHTML = btn.innerHTML.replace("[Weniger anzeigen]", "[Weiter]").replace("Weniger anzeigen", "Mehr Erfahren");
+                }
+            } else {
+                x.style.display = "block";
+                if(btn.className === "mehr-erfahren-btn" || btn.innerHTML.includes("[Weiter]")) {
+                    btn.innerHTML = btn.innerHTML.replace("[Weiter]", "[Weniger anzeigen]").replace("Mehr Erfahren", "Weniger anzeigen");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
