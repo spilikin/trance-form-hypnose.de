@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Negative Glaubenssätze - Trance.form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="angst-panikattacken.html">Ängste & Panik</a></li>
+            <li><a href="selbstwert.html">Selbstwert</a></li>
+            <li><a href="schlafstoeungen.html">Schlaf</a></li>
+            <li><a href="burnout.html">Burnout</a></li>
+            <li><a href="glaubenssaetze.html" class="active">Glaubenssätze</a></li>
+            <li><a href="methode.html">Methode</a></li>
+            <li><a href="ablauf.html">Ablauf</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Negative Glaubenssätze</h1>
+        <p class="highlight-text">Krankmacher und Glücksbarriere zugleich</p>
+
+        <p>Negative Glaubenssätze begleiten Betroﬀene häufig durch ihr ganzes Leben. In vielen Fällen verhindern sie, dass Menschen erfüllte Partnerschaften führen oder beruflich ihr volles Potential entfalten können. Wie eine bleierne Kugel kleben Glaubenssätze scheinbar unlösbar an einem fest.</p>
+        
+        <h2>Die Folgen von negativen Glaubenssätzen</h2>
+        <p>Negative Glaubenssätze bedeuten zumeist Einschränkungen der Lebensqualität. In Partnerschaften werden die Betroﬀenen häufig mit den limitierenden Glaubenssätzen konfrontiert. Gerade Menschen, die den Glaubenssatz „Ich bin nicht liebenswert" in sich tragen, machen es sich selbst und auch ihren Partnern schwer. Eifersucht und Minderwertigkeitsgefühle erschweren eine gesunde Partnerschaft. Dabei könnte alles viel leichter sein, wenn die Glaubenssätze nicht wären.</p>
+        
+        <p>Im Beruf sorgen negative Glaubenssätze häufig für Leistungsblockaden. Besonders schwer haben es oftmals Selbstständige, die fachlich gut sind, aber tagtäglich gegen ihre Glaubenssätze ankämpfen müssen. Vielfach werden dann Termine verschoben oder abgesagt, und die Angst vor Kunden oder Geschäftspartnern erschwert den reibungslosen Umgang mit gerade den Menschen, die für das eigene Business wichtig wären. Die Betroﬀenen berichten sehr häufig darüber, dass dieser tägliche Kampf gegen sich selbst als extrem anstrengend empfunden wird.</p>
+        
+        <p>Auch Menschen, die einen beruflichen Wechsel anstreben oder kurz davor sind, sich selbstständig zu machen, werden häufig von negativen Glaubenssätzen gefangen gehalten. Die Betroﬀenen trauen sich dann nicht, die nötige Bewerbung zu schreiben, ihre Homepage online zu stellen oder anderweitig für den beruflichen Aufschwung zu sorgen - aus Angst, nicht gut genug zu sein.</p>
+        
+        <h2>Der Weg nach vorne</h2>
+        <p>Eigentlich unglaublich, welche Macht die Vergangenheit über uns hat. Deshalb werde ich immer sehr skeptisch, wenn ich von sogenannten Motivationstrainern höre, wir müssten immer nach vorne schauen und einfach nur handeln. So einfach ist es dann nun auch wieder nicht. Erst der Blick zurück gibt den Weg nach vorne frei.</p>
+
+        <p>Mit Auflösender Hypnose können wir negative Glaubenssätze aufdecken und aufzulösen. Dadurch öffnen sich neue Möglichkeiten in Partnerschaft, Beruf und Persönlichkeitsentwicklung.</p>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <p><a href="kontakt.html" style="color: rgb(19, 19, 174); font-weight: bold; text-decoration: none; font-size: 1.2em;">Vereinbaren Sie ein kostenloses Vorgespräch →</a></p>
+        </div>
+    </div>
+
+    <script>
+        function toggleSection(id) {
+            var x = document.getElementById(id);
+            var btn = event.target;
+            if (x.style.display === "block") {
+                x.style.display = "none";
+                if(btn.className === "mehr-erfahren-btn" || btn.innerHTML.includes("[Weniger anzeigen]")) {
+                    btn.innerHTML = btn.innerHTML.replace("[Weniger anzeigen]", "[Weiter]").replace("Weniger anzeigen", "Mehr Erfahren");
+                }
+            } else {
+                x.style.display = "block";
+                if(btn.className === "mehr-erfahren-btn" || btn.innerHTML.includes("[Weiter]")) {
+                    btn.innerHTML = btn.innerHTML.replace("[Weiter]", "[Weniger anzeigen]").replace("Mehr Erfahren", "Weniger anzeigen");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
