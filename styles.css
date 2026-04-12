@@ -21,15 +21,8 @@ body {
     background-color: #fff;
 }
 
-/* Hamburger toggle (hidden on desktop) */
-.hamburger {
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.hamburger-label {
+/* Hamburger button (hidden on desktop) */
+.hamburger-btn {
     display: none;
 }
 
@@ -182,7 +175,7 @@ li {
 
 /* Tablet und kleinere Screens (max 768px) */
 @media (max-width: 768px) {
-    .hamburger-label {
+    .hamburger-btn {
         display: block;
         position: fixed;
         top: 0;
@@ -196,6 +189,9 @@ li {
         font-size: 1.5em;
         cursor: pointer;
         line-height: 1;
+        border: none;
+        text-align: left;
+        width: 100%;
     }
 
     nav {
@@ -212,7 +208,7 @@ li {
         box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
 
-    .hamburger:checked ~ nav {
+    nav.open {
         max-height: 100vh;
         overflow-y: auto;
     }
