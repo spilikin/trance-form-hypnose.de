@@ -23,7 +23,10 @@ body {
 
 /* Hamburger toggle (hidden on desktop) */
 .hamburger {
-    display: none;
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
 .hamburger-label {
@@ -200,12 +203,13 @@ li {
         top: 48px;
         left: 0;
         right: 0;
-        width: 100%;
-        height: auto;
+        width: 100% !important;
+        height: auto !important;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
         z-index: 150;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
 
     .hamburger:checked ~ nav {
@@ -253,6 +257,7 @@ li {
 @media (max-width: 480px) {
     body {
         font-size: 14px;
+        margin-top: 48px;
     }
 
     .container {
