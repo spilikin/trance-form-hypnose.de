@@ -173,6 +173,27 @@ li {
     margin-right: auto;
 }
 
+.responsive-video {
+    display: block;
+    width: 480px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px auto 10px;
+    background-color: #000;
+}
+
+.responsive-video.hochformat {
+    width: 380px;
+}
+
+.video-untertitel {
+    text-align: center;
+    font-size: 0.85em;
+    color: #3B5D8C;
+    margin-bottom: 25px;
+}
+
 /* Tablet und kleinere Screens (max 768px) */
 @media (max-width: 768px) {
     .hamburger-btn {
