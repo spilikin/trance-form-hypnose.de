@@ -2,6 +2,7 @@
 (function () {
     var GA_ID = 'G-S6LJW6H8JC';
     var KEY = 'tf-consent';
+    var GUELTIG_TAGE = 365;
 
     function ladeAnalytics() {
         var s = document.createElement('script');
@@ -16,8 +17,30 @@
         gtag('config', GA_ID);
     }
 
+    function speichere(wert) {
+        try {
+            localStorage.setItem(KEY, JSON.stringify({ wahl: wert, zeit: Date.now() }));
+        } catch (e) {}
+    }
+
+    /* Gespeicherte Wahl lesen; nach GUELTIG_TAGE gilt sie als abgelaufen. */
+    function leseEntscheidung() {
+        var roh = null;
+        try { roh = localStorage.getItem(KEY); } catch (e) {}
+        if (!roh) return null;
+        if (roh === 'granted' || roh === 'denied') {
+            speichere(roh);          // Altbestand ohne Datum: Frist beginnt jetzt
+            return roh;
+        }
+        try {
+            var d = JSON.parse(roh);
+            if (Date.now() - d.zeit < GUELTIG_TAGE * 86400000) return d.wahl;
+        } catch (e) {}
+        return null;                 // abgelaufen oder unlesbar: erneut fragen
+    }
+
     function entscheide(wert) {
-        try { localStorage.setItem(KEY, wert); } catch (e) {}
+        speichere(wert);
         var banner = document.getElementById('tf-consent');
         if (banner) banner.parentNode.removeChild(banner);
         if (wert === 'granted') ladeAnalytics();
@@ -90,10 +113,9 @@
     function start() {
         verknuepfeWiderruf();
         verfolgeKontaktklicks();
-        var gespeichert = null;
-        try { gespeichert = localStorage.getItem(KEY); } catch (e) {}
-        if (gespeichert === 'granted') { ladeAnalytics(); return; }
-        if (gespeichert === 'denied') { return; }
+        var wahl = leseEntscheidung();
+        if (wahl === 'granted') { ladeAnalytics(); return; }
+        if (wahl === 'denied') { return; }
         zeigeBanner();
     }
 
