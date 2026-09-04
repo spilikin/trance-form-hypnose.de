@@ -70,8 +70,26 @@
         });
     }
 
+
+    /* Kontaktwege als Ereignisse melden - nur wenn eingewilligt wurde */
+    function verfolgeKontaktklicks() {
+        document.addEventListener('click', function (e) {
+            if (typeof window.gtag !== 'function') return;
+            var a = e.target && e.target.closest ? e.target.closest('a') : null;
+            if (!a) return;
+            var ziel = a.getAttribute('href') || '';
+            var ereignis =
+                ziel.indexOf('doctolib.de') > -1 ? 'termin_klick' :
+                ziel.indexOf('mailto:') === 0   ? 'email_klick' :
+                ziel.indexOf('tel:') === 0      ? 'telefon_klick' : null;
+            if (!ereignis) return;
+            window.gtag('event', ereignis, { seite: location.pathname });
+        });
+    }
+
     function start() {
         verknuepfeWiderruf();
+        verfolgeKontaktklicks();
         var gespeichert = null;
         try { gespeichert = localStorage.getItem(KEY); } catch (e) {}
         if (gespeichert === 'granted') { ladeAnalytics(); return; }
