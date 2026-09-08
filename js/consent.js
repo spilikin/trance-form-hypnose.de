@@ -15,6 +15,14 @@
         window.gtag = gtag;
         gtag('js', new Date());
         gtag('config', GA_ID);
+        meldeAnfrage(gtag);
+    }
+
+    /* Die Danke-Seite erreicht nur, wer das Rueckruf-Formular abgeschickt hat.
+       Ihr Aufruf ist damit die Conversion fuer Google Ads. */
+    function meldeAnfrage(gtag) {
+        if (location.pathname.indexOf('/danke-vorgespraech') !== 0) return;
+        gtag('event', 'vorgespraech_anfrage', { seite: location.pathname });
     }
 
     function speichere(wert) {

@@ -16,6 +16,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="stylesheet" href="styles.css">
     <script src="/js/consent.js" defer></script>
+    <script src="/js/rueckruf.js" defer></script>
 </head>
 <body>
     <button class="hamburger-btn" onclick="document.querySelector('nav').classList.toggle('open')">&#9776; Trance...form</button>
@@ -56,6 +57,56 @@
         <div style="margin-top: 40px; text-align: center;">
             <p><a href="kontakt.html" style="color: rgb(19, 19, 174); font-weight: bold; text-decoration: none; font-size: 1.2em;">Vereinbaren Sie ein kostenloses Vorgespräch →</a></p>
         </div>
+        <!-- Rueckruf-Formular -->
+        <section class="rueckruf" id="rueckruf" aria-labelledby="rueckruf-titel">
+            <h2 id="rueckruf-titel">Kostenfreies Vorgespräch &ndash; ich rufe Sie an</h2>
+            <p class="rueckruf-intro">
+                Kein Login, keine Anmeldung, kein Konto: Name und Telefonnummer genügen.
+                Ich melde mich persönlich bei Ihnen &ndash; unverbindlich und kostenfrei.
+            </p>
+
+            <!-- Bitte hier KEIN Feld nach Beschwerden, Diagnose oder Anliegen ergänzen.
+                 Das wären Gesundheitsdaten nach Art. 9 DSGVO und dafür reicht
+                 dieses Formular datenschutzrechtlich nicht aus. -->
+            <form class="rueckruf-form" method="POST" action="https://formcarry.com/s/FORMCARRY_ID_HIER_EINTRAGEN">
+                <input type="hidden" name="_next" value="https://www.trance-form-hypnose.de/danke-vorgespraech.html" />
+                <input type="hidden" name="Seite" value="Glaubenssaetze" />
+                <p class="rueckruf-gotcha" aria-hidden="true">
+                    <label for="rf-gotcha">Dieses Feld bitte frei lassen</label>
+                    <input type="text" id="rf-gotcha" name="_gotcha" tabindex="-1" autocomplete="off" />
+                </p>
+
+                <div class="rueckruf-feld">
+                    <label for="rf-name">Ihr Name (Pflichtfeld)</label>
+                    <input type="text" id="rf-name" name="Name" required autocomplete="name" />
+                </div>
+
+                <div class="rueckruf-feld">
+                    <label for="rf-telefon">Ihre Telefonnummer (Pflichtfeld)</label>
+                    <input type="tel" id="rf-telefon" name="Telefon" required minlength="6" inputmode="tel" autocomplete="tel" aria-describedby="rf-telefon-hinweis" />
+                </div>
+                <p class="rueckruf-hinweis" id="rf-telefon-hinweis">Unter dieser Nummer rufe ich Sie zurück.</p>
+
+                <div class="rueckruf-feld">
+                    <label for="rf-zeit">Wann darf ich anrufen? (freiwillig)</label>
+                    <input type="text" id="rf-zeit" name="Wunschzeit" autocomplete="off" placeholder="z. B. werktags ab 17 Uhr" />
+                </div>
+
+                <button type="submit" class="rueckruf-btn">Jetzt kostenfreies Rückruf-Gespräch anfordern</button>
+
+                <p class="rueckruf-datenschutz">
+                    Ihre Angaben nutze ich ausschließlich, um Sie zurückzurufen.
+                    Mehr dazu in der <a href="datenschutz.html">Datenschutzerklärung</a>.
+                </p>
+            </form>
+
+            <p class="rueckruf-alternative">
+                Lieber direkt? <a href="tel:+4933056409770">033056 409770</a> &middot;
+                <a href="mailto:trance.form@email.de">trance.form@email.de</a> &middot;
+                <a href="https://www.doctolib.de/arzt/berlin/kerstin-uhl-hochgraeber" target="_blank" rel="noopener noreferrer">Termin über Doctolib</a>
+            </p>
+        </section>
+
     </div>
 
     <script>
