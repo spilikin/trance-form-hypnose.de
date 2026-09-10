@@ -4,7 +4,7 @@
 (function () {
     var FEHLERTEXT =
         'Das Formular konnte gerade nicht gesendet werden. Bitte rufen Sie mich ' +
-        'einfach an: <a href="tel:+4933056409770">033056 409770</a> &ndash; oder ' +
+        'einfach an: <a href="tel:+491633938181">0163 3938181</a> &ndash; oder ' +
         'schreiben Sie an <a href="mailto:trance.form@email.de">trance.form@email.de</a>.';
 
     function zeigeFehler(form) {
