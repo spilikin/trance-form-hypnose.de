@@ -39,6 +39,21 @@
             });
     }
 
+    /* Der schwebende Tab soll das Formular nicht verdecken: sobald das
+       Formular selbst im Bild ist, wird er ausgeblendet. */
+    function tabSteuern() {
+        var tab = document.querySelector('.vorgespraech-tab');
+        var ziel = document.getElementById('rueckruf');
+        if (!tab || !ziel || !('IntersectionObserver' in window)) return;
+        var beobachter = new IntersectionObserver(
+            function (eintraege) {
+                tab.style.display = eintraege[0].isIntersecting ? 'none' : 'block';
+            },
+            { threshold: 0.2 }
+        );
+        beobachter.observe(ziel);
+    }
+
     function start() {
         var formulare = document.querySelectorAll('.rueckruf-form');
         Array.prototype.forEach.call(formulare, function (form) {
@@ -52,6 +67,7 @@
                 sende(form, btn, urspruenglich);
             });
         });
+        tabSteuern();
     }
 
     if (document.readyState === 'loading') {
